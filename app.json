@@ -1,0 +1,62 @@
+{
+  "expo": {
+    "name": "NearMe",
+    "slug": "nearme",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#FF6B35"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.nearme.app",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "O NearMe usa sua localização para encontrar estabelecimentos próximos a você.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "O NearMe usa sua localização para encontrar estabelecimentos próximos a você."
+      },
+      "config": {
+        "googleMapsApiKey": "$EXPO_PUBLIC_GOOGLE_API_KEY"
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#FF6B35"
+      },
+      "package": "com.nearme.app",
+      "edgeToEdgeEnabled": true,
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "INTERNET",
+        "CALL_PHONE"
+      ],
+      "config": {
+        "googleMaps": {
+          "apiKey": "$EXPO_PUBLIC_GOOGLE_API_KEY"
+        }
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    },
+    "plugins": [
+      "expo-location",
+      [
+        "react-native-maps",
+        {
+          "googleMapsApiKey": "$EXPO_PUBLIC_GOOGLE_API_KEY"
+        }
+      ]
+    ],
+    "extra": {
+      "googleMapsApiKey": "$EXPO_PUBLIC_GOOGLE_API_KEY"
+    }
+  }
+}
